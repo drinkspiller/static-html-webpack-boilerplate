@@ -1,9 +1,47 @@
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+/**
+ * Variables
+ */
+ $bgColor: #333;
+ $padding: 1.6rem;
+
+/**
+ * Apply a natural box layout model to all elements, but allowing
+ * components to change.
+ */
+ html {
+  box-sizing: border-box;
+  font-size:62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-img {
-  display: block;
-  margin: 50px auto;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden
+}
+
+body {
+  background: $bgColor;
+  color: rgb(225, 225, 225);
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-weight: 100;
+}
+
+#view {
+  display: flex;
+  flex: 1;
+  padding: $padding;
 }
