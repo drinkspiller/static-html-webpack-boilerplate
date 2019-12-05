@@ -27,12 +27,12 @@ class App {
     const router = new Navigo(null, true, '#');
     router.on({
       'sampleroute': () => {
-        let templateData = {
+        const templateData = {
           name: 'World',
         };
 
         this.loadHTML('./templates/default.html', templateData);
-      }
+      },
     });
 
     // Sets the default route.
@@ -59,7 +59,7 @@ class App {
     const templateRequest = await fetch(url);
     const uncompiledTemplate = await templateRequest.text();
     const template = Handlebars.compile(uncompiledTemplate);
-    let renderedTemplate =
+    const renderedTemplate =
       await template(templateData);
     VIEW_ELEMENT.innerHTML = renderedTemplate;
   }

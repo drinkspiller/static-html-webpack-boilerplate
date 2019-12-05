@@ -8,7 +8,6 @@
     "lint:js": "./node_modules/.bin/eslint src/js/*.js",
     "jsfix": "./node_modules/.bin/eslint src/js/*.js --fix",
     "lint:styles": "stylelint \"src/**/*.scss\"",
-    "lint:html": "pa11y-ci ./src/**/*.html",
     "dev": "webpack-dev-server --config webpack.config.dev.js --mode development",
     "prod": "webpack --config webpack.config.prod.js && http-server ./dist -o",
     "deploy": "gsutil cp -R dist/* gs://<bucket>"
@@ -39,7 +38,6 @@
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "pa11y-ci": "^2.1.1",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^7.1.0",
@@ -50,7 +48,6 @@
     "webpack": "^4.18.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
-
     "webpack-merge": "^4.1.4"
   },
   "browserslist": [
